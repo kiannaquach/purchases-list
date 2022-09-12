@@ -19,31 +19,32 @@ function App() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    getPurchases();
-    isMobileDevice();
-  }, []);
+    const isMobileDevice = () => {
+      window.addEventListener('resize', checkScreenSize);
 
-  const getPurchases = () => {
-    fetch('https://idme-interview.herokuapp.com/')
-      .then((res) => res.json())
-      .then((response) => {
-        setPurchases(response);
-        setIsLoadingPurchases(false);
-      })
-      .catch((error) => console.error(error));
-  };
+      return () => {
+        window.removeEventListener('resize');
+      };
+    };
 
-  const isMobileDevice = () => {
+    const getPurchases = () => {
+      fetch('https://idme-interview.herokuapp.com/')
+        .then((res) => res.json())
+        .then((response) => {
+          setPurchases(response);
+          setIsLoadingPurchases(false);
+        })
+        .catch((error) => console.error(error));
+    };
+
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 1100);
     };
 
-    window.addEventListener('resize', checkScreenSize);
-
-    return () => {
-      window.removeEventListener('resize');
-    };
-  };
+    getPurchases();
+    checkScreenSize();
+    isMobileDevice();
+  }, []);
 
   // I originally created this to see all the categories associated
   // with each purchase. I am keeping this here to show my logic.
