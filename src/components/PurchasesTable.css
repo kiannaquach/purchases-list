@@ -1,0 +1,96 @@
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+
+thead tr th {
+  color: rgb(39, 40, 51);
+  border-bottom: 1px solid rgb(231, 231, 237);
+}
+
+table tbody tr:first-child th,
+table tbody tr:first-child td {
+  padding-top: 0.5rem;
+}
+.purchase-location {
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.purchase-date {
+  width: 18%;
+}
+
+.purchases-table {
+  border: 1px solid rgb(231, 231, 237);
+  border-radius: 5px;
+}
+
+.purchase-button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  outline: inherit;
+}
+
+.purchase-button:after {
+  color: #6b6c7e;
+  content: '\22EE';
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.category-tag {
+  border-radius: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  text-align: center;
+}
+
+.category-tag-container {
+  display: flex;
+  justify-content: center;
+}
+
+.category-tag-title {
+  text-align: center;
+}
+
+.apparel {
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  color: rgb(0, 0, 0);
+}
+
+.automotive {
+  border: 1px solid rgb(51, 150, 79, 0.3);
+  color: rgb(51, 150, 79);
+}
+.entertainment {
+  border: 1px solid rgb(45, 90, 172, 0.3);
+  color: rgb(45, 90, 172);
+}
+.food {
+  border: 1px solid rgb(217, 65, 47, 0.3);
+  color: rgb(217, 65, 47);
+}
+.footwear {
+  border: 1px solid rgb(128, 0, 128, 0.3);
+  color: rgb(128, 0, 128);
+}
+.technology {
+  border: 1px solid rgb(0, 128, 128, 0.3);
+  color: rgb(0, 128, 128);
+}
+.travel {
+  border: 1px solid rgb(128, 128, 0, 0.3);
+  color: rgb(128, 128, 0);
+}
